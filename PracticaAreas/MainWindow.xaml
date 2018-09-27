@@ -8,61 +8,17 @@
         Title="MainWindow" Height="450" Width="800">
     <WrapPanel Orientation="Vertical">
         <TextBlock>Áreas de Figuras geométricas</TextBlock>
-        <TextBlock>Rectángulo:</TextBlock>
-        <WrapPanel Orientation="Horizontal">
-            <TextBlock Margin="0,0,0,0">base:</TextBlock>
-            <TextBlock Margin="100,0,0,0">Altura:</TextBlock>
-            <TextBlock Margin="175,0,0,0">Área:</TextBlock>
-        </WrapPanel>
-        <WrapPanel Orientation="Horizontal">
-            <TextBox Name="baseRectangulo" Width="100" Margin="0,0,0,0"/>
-            <TextBox Name="alturaRectangulo" Width="100" Margin="25,0,0,0"/>
-            <Button Name="BotonRectangulo" Click="BotonRectangulo_Click" Margin="30,0,0,0">Calcular</Button>
-            <TextBlock Name="arearectangulo" Width="50" Margin="33,0,0,0"></TextBlock>
-        </WrapPanel>
-        <TextBlock>Triangulo:</TextBlock>
-        <WrapPanel Orientation="Horizontal">
-            <TextBlock Margin="0,0,0,0">base:</TextBlock>
-            <TextBlock Margin="100,0,0,0">Altura:</TextBlock>
-            <TextBlock Margin="175,0,0,0">Área:</TextBlock>
-        </WrapPanel>
-        <WrapPanel Orientation="Horizontal">
-            <TextBox Name="baseTriangulo" Width="100" Margin="0,0,0,0"/>
-            <TextBox  Width="100" Margin="25,0,0,0"/>
-            <Button Name="BotonTriangulo" Click="BotonTriangulo_Click" Margin="30,0,0,0">Calcular</Button>
-            <TextBlock Width="50" Margin="33,0,0,0"></TextBlock>
-        </WrapPanel>
-        <TextBlock>Circulo:</TextBlock>
-        <WrapPanel Orientation="Horizontal">
-            <TextBlock Margin="0,0,0,0">Radio:</TextBlock>
-          
-            <TextBlock Margin="304,0,0,0">Área:</TextBlock>
-        </WrapPanel>
-        <WrapPanel Orientation="Horizontal">
-            <TextBox Width="100" Margin="0,0,0,0"/>
-            <Button Name="BotonCirculo" Click="BotonCirculo_Click" Margin="153,0,0,0">Calcular</Button>
-            <TextBlock Width="50" Margin="33,0,0,0"></TextBlock>
-        </WrapPanel>
-        <TextBlock>Trapecio:</TextBlock>
-        <WrapPanel Orientation="Horizontal">
-            <TextBlock Margin="0,0,0,0">base mayor:</TextBlock>
-            <TextBlock Margin="61,0,0,0">base menor:</TextBlock>
-            <TextBlock Margin="147,0,0,0">Área:</TextBlock>
-        </WrapPanel>
-        <WrapPanel Orientation="Horizontal">
-            <TextBox Width="100" Margin="0,0,0,0"/>
-            <TextBox Width="100" Margin="25,0,0,0"/>
-            <Button Name="BotonTrapecio" Click="BotonTrapecio_Click" Margin="30,0,0,0">Calcular</Button>
-            <TextBlock Width="50" Margin="33,0,0,0"></TextBlock>
-        </WrapPanel>
-        <WrapPanel Orientation="Horizontal">
-            <TextBlock Margin="0,0,0,0">altura:</TextBlock>
-          
-        </WrapPanel>
-        <WrapPanel Orientation="Horizontal">
-            <TextBox Width="100" Margin="0,0,0,0"/>
-         
-        </WrapPanel>
+        <TextBlock Margin="175,0,0,0">Área:</TextBlock>
+        <TextBox></TextBox>
+        <ComboBox Name="SeleccionFigura">
+            <ComboBoxItem>Rectangulo</ComboBoxItem>
+            <ComboBoxItem>Triangulo</ComboBoxItem>
+            <ComboBoxItem>Circulo</ComboBoxItem>
+            <ComboBoxItem>Trapecio</ComboBoxItem>
+        </ComboBox>
+        <StackPanel Name="PanelConfiguracion">
+            
+        </StackPanel>
     </WrapPanel>
     
 

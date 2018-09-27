@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="PracticaAreas.ControlAreaRectangulo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PracticaAreas"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <WrapPanel Orientation="Vertical" Background="White">
+        <TextBlock>Rectángulo:</TextBlock>
+        <WrapPanel Orientation="Horizontal">
+            <TextBlock Margin="0,0,0,0">base:</TextBlock>
+            <TextBlock Margin="100,0,0,0">Altura:</TextBlock>
+            <TextBlock Margin="175,0,0,0">Área:</TextBlock>
+        </WrapPanel>
+        <WrapPanel Orientation="Horizontal">
+            <TextBox Name="baseRectangulo" Width="100" Margin="0,0,0,0"/>
+            <TextBox Name="alturaRectangulo" Width="100" Margin="25,0,0,0"/>
+            <Button Name="BotonRectangulo" Click="BotonRectangulo_Click" Margin="30,0,0,0">Calcular</Button>
+            <TextBlock Name="arearectangulo" Width="50" Margin="33,0,0,0"></TextBlock>
+        </WrapPanel>
+    </WrapPanel>
+</UserControl>
