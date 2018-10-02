@@ -6,26 +6,20 @@
              xmlns:local="clr-namespace:PracticaAreas"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <WrapPanel Orientation="Vertical" Background="White">
-        <TextBlock>Trapecio:</TextBlock>
-        <WrapPanel Orientation="Horizontal">
-            <TextBlock Margin="0,0,0,0">base mayor:</TextBlock>
-            <TextBlock Margin="61,0,0,0">base menor:</TextBlock>
-            <TextBlock Margin="147,0,0,0">Área:</TextBlock>
-        </WrapPanel>
-        <WrapPanel Orientation="Horizontal">
-            <TextBox Name="Basemayor" Width="100" Margin="0,0,0,0"/>
-            <TextBox Name="Basemenor" Width="100" Margin="25,0,0,0"/>
-            <Button Name="BotonTrapecio" Click="BotonTrapecio_Click" Margin="30,0,0,0">Calcular</Button>
-            <TextBlock Name="areaTrapecio" Width="50" Margin="33,0,0,0"></TextBlock>
-        </WrapPanel>
-        <WrapPanel Orientation="Horizontal">
-            <TextBlock Margin="0,0,0,0">altura:</TextBlock>
+    <StackPanel Background="White">
+        <StackPanel Margin="0,0,18,15">
+            <TextBlock FontSize="19"><Run Text="Trapecio:"/></TextBlock>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock><Run Text="base mayor:"/></TextBlock>
+                <TextBlock Margin="114,0,0,0"><Run Text="base menor:"/></TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="tbxBaseMT" Width="120" HorizontalAlignment="Left"/>
+                <TextBox x:Name="tbxBaseMrT" Width="120" HorizontalAlignment="Left" Margin="58,0,0,0"/>
+            </StackPanel>
+            <TextBlock Margin="0,10,0,0"><Run Text="altura:"/></TextBlock>
+            <TextBox x:Name="tbxAlturaTra" Width="120" HorizontalAlignment="Left"/>
+        </StackPanel>
 
-        </WrapPanel>
-        <WrapPanel Orientation="Horizontal">
-            <TextBox Name="alturatrapecio" Width="100" Margin="0,0,0,0"/>
-
-        </WrapPanel>
-    </WrapPanel>
+    </StackPanel>
 </UserControl>

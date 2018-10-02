@@ -6,17 +6,14 @@
              xmlns:local="clr-namespace:PracticaAreas"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <WrapPanel Orientation="Vertical" Background="White">
-        <TextBlock>Circulo:</TextBlock>
-        <WrapPanel Orientation="Horizontal">
-            <TextBlock Margin="0,0,0,0">Radio:</TextBlock>
+    <StackPanel Background="White">
+        <TextBlock FontSize="19" Margin="0,0,18,0"><Run Text="Círculo:"/></TextBlock>
+        <StackPanel Orientation="Horizontal" Margin="0,0,18,0">
+            <TextBlock><Run Text="radio:"/></TextBlock>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="0,0,18,0">
+            <TextBox x:Name="tbxRadioC" Width="120" HorizontalAlignment="Left"/>
+        </StackPanel>
 
-            <TextBlock Margin="304,0,0,0">Área:</TextBlock>
-        </WrapPanel>
-        <WrapPanel Orientation="Horizontal">
-            <TextBox Name="Radio" Width="100" Margin="0,0,0,0"/>
-            <Button Name="BotonCirculo" Click="BotonCirculo_Click" Margin="153,0,0,0">Calcular</Button>
-            <TextBlock Name="areaCirculo" Width="50" Margin="33,0,0,0"></TextBlock>
-        </WrapPanel>
-    </WrapPanel>
+    </StackPanel>
 </UserControl>

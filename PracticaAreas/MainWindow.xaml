@@ -5,21 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PracticaAreas"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <WrapPanel Orientation="Vertical">
-        <TextBlock>Áreas de Figuras geométricas</TextBlock>
-        <TextBlock Margin="175,0,0,0">Área:</TextBlock>
-        <TextBox></TextBox>
-        <ComboBox Name="SeleccionFigura">
+        Title="MainWindow" Height="450" Width="800" MinWidth="550" MinHeight="500">
+    <StackPanel Margin="10,0,0,0">
+        <TextBlock FontSize="24">Áreas de Figuras geométricas</TextBlock>
+        <ComboBox Name="cbTipoFigura" Width="300" HorizontalAlignment="Left" SelectionChanged="cbTipoFigura_SelectionChanged">
             <ComboBoxItem>Rectangulo</ComboBoxItem>
             <ComboBoxItem>Triangulo</ComboBoxItem>
             <ComboBoxItem>Circulo</ComboBoxItem>
             <ComboBoxItem>Trapecio</ComboBoxItem>
         </ComboBox>
-        <StackPanel Name="PanelConfiguracion">
-            
+        <StackPanel Name="panelConfiguracion"></StackPanel>
+        <StackPanel Margin="0,0,0,15">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Margin="230,0,0,0">área:</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button Name="btn" Click="btn_Click" Width="60" Margin="43,0,0,0">Calcular</Button>
+                <TextBlock Name="lblResultadoArea" Margin="39,0,0,0" Text="0.0"></TextBlock>
+            </StackPanel>
         </StackPanel>
-    </WrapPanel>
-    
 
+
+
+
+    </StackPanel>
 </Window>

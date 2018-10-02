@@ -14,9 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace PracticaAreas
-
 {
-    
     /// <summary>
     /// Lógica de interacción para MainWindow.xaml
     /// </summary>
@@ -25,40 +23,85 @@ namespace PracticaAreas
         public MainWindow()
         {
             InitializeComponent();
-            
-        }
-        
-        private void BotonRectangulo_Click(object sender, RoutedEventArgs e)
-        {
-            int aux = int.Parse(baseRectangulo.Text);
-            int aux2 = int.Parse(alturaRectangulo.Text);
-            float aux3 = aux * aux2;
-            arearectangulo.Text = aux3.ToString();
-        }
-        
-        private void BotonTriangulo_Click(object sender, RoutedEventArgs e)
-        {
-            int aux = int.Parse(baseTriangulo.Text);
-            int aux2 = int.Parse(alturaTriangulo.Text);
-            float aux3 = (aux * aux2) / 2;
-            areaTriangulo.Text = aux3.ToString();
         }
 
-        private void BotonCirculo_Click(object sender, RoutedEventArgs e)
+        private void btnUnoCR_Click(object sender, RoutedEventArgs e)
         {
-            int aux = int.Parse(Radio.Text);
-            double aux3 = (aux * aux) * 3.14 ;
-            areaCirculo.Text = aux3.ToString();
 
         }
 
-        private void BotonTrapecio_Click(object sender, RoutedEventArgs e)
+        private void btnAreaTri_Click(object sender, RoutedEventArgs e)
         {
-            int aux = int.Parse(Basemayor.Text);
-            int aux2 = int.Parse(Basemenor.Text);
-            int aux3 = int.Parse(alturatrapecio.Text);
-            double aux4 = ((aux + aux2) / 2) * aux3;
-            areaTrapecio.Text = aux4.ToString();
+
+        }
+
+        private void btnAreaC_Click(object sender, RoutedEventArgs e)
+        {
+            /*double aux = double.Parse(tbxRadioC.Text);
+            aux = (aux*aux) * 3.14;
+            tbkAreaC.Text = aux.ToString();*/
+        }
+
+        private void btnAreaTra_Click(object sender, RoutedEventArgs e)
+        {
+            /* int aux = int.Parse(tbxBaseMT.Text);
+             int aux2 = int.Parse(tbxBaseMrT.Text);
+             int aux3 = int.Parse(tbxAlturaTra.Text);
+             int aux4 = (aux+aux2)/2*aux3;
+             tbkAreaTra.Text = aux4.ToString();*/
+        }
+
+        private void cbTipoFigura_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            panelConfiguracion.Children.Clear();
+            switch (cbTipoFigura.SelectedIndex)
+            {
+                case 0:  //Rectangulo
+                    panelConfiguracion.Children.Add(new ControlAreaRectangulo());
+                    break;
+                case 1:  //Triangulo
+                    panelConfiguracion.Children.Add(new ControlAreaTriangulo());
+                    break;
+                case 2:  //Circulo
+                    panelConfiguracion.Children.Add(new ControlAreaCirculo());
+                    break;
+                case 3:  //Trapecio
+                    panelConfiguracion.Children.Add(new ControlAreaTrapecio());
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void btn_Click(object sender, RoutedEventArgs e)
+        {
+            double area = 0.0;
+            switch (cbTipoFigura.SelectedIndex)
+            {
+                case 0: //Rectangulo
+                    var ControlAreaRectangulo = (ControlAreaRectangulo)panelConfiguracion.Children[0];
+                    int aux = int.Parse(ControlAreaRectangulo.tbxBaseR.Text);
+                    int aux2 = int.Parse(ControlAreaRectangulo.tbxAlturaR.Text);
+                    area = aux * aux2;
+                    break;
+                case 1: //Triangulo
+                    var ControlAreaTriangulo = (ControlAreaTriangulo)panelConfiguracion.Children[0];
+                    aux = int.Parse(ControlAreaTriangulo.tbxAlturaTri.Text);
+                    aux2 = int.Parse(ControlAreaTriangulo.tbxAlturaTri.Text);
+                    area = (aux * aux2) / 2;
+                    break;
+                case 2: //Circulo
+                    var ControlAreaCirculo = (ControlAreaCirculo)panelConfiguracion.Children[0];
+                    int aux = int.Parse(ControlAreaCirculo.tbxRadioC.Text);
+                    area
+                    break;
+                case 3: //Trapecio
+                    break;
+                default:
+                    break;
+
+            }
+            lblResultadoArea.Text = area.ToString();
         }
     }
 }
